@@ -3,6 +3,7 @@ Python script printing animation sequences in a given directory.
 
 This repository includes:
 * Development analysis of the script (down below in the current file)
+* The script (function find_animation_sequences from file animation_sequences.py)
 ___
 ## Analysis (brainstorm)
 ### Task summary
@@ -20,13 +21,13 @@ In a real world situation, each assumption would need to be validated with
 the appropriate people: we don't want to miss out important edge cases, and
 we don't want to spend time developing unnecessary features.
 
-#### 1. path may not exist
+**1. path may not exist**
 
 	Suggested outcome:
 		exception raised
 
 
-#### 2. path may contain more than one set of animated sequences
+**2. path may contain more than one set of animated sequences**
  
 	e.g. name1.[0000-0010].jpeg,
 	     name2.[0000-0010].jpeg,
@@ -37,7 +38,7 @@ we don't want to spend time developing unnecessary features.
          'name2: 0-10'
          'name3: 0-10'
 
-#### 3. path may contain files with unknown format
+**3. path may contain files with unknown format**
    
 	e.g. name1.[0000-0010].jpeg,
          name2.000a.jpeg,
@@ -51,7 +52,7 @@ we don't want to spend time developing unnecessary features.
          'name1: 0-10'
          'name7: 20'
 
-#### 4. path contains one file extension per name
+**4. path contains one file extension per name**
 
 The following example will not be supported to keep the function simple:
 
@@ -91,5 +92,5 @@ It's a matter of organizing strings (filename) in a given directory:
 	1. sort list
 	2. As we iterate each number, retain the first and last value of each range.
 	3. When previous number visited is no longer a difference of 1, we know there's a gap - current range has been completed.
-	4. yield first and last (tuple) if they are different, otherwise yield only first or last (int)
+	4. Generate interval if first and last if they are different, otherwise only generate first (or last)
        
