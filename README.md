@@ -4,6 +4,7 @@ Python script printing animation sequences in a given directory.
 This repository includes:
 * Development analysis of the script (down below in the current file)
 * The script (function find_animation_sequences from file animation_sequences.py)
+* Test cases added using unittest from Python (Use command ```python -m unittest``` from root of the project)
 ___
 ## Analysis (brainstorm)
 ### Task summary
