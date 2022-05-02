@@ -82,16 +82,16 @@ The following example will not be supported to keep the function simple:
         'name2: 0-10'
 
 ### Implementation
-It's a matter of organizing strings (filename) in a given directory:
+It's a matter of organizing filenames (string) in a given directory:
 
  	If path exists
-     	For each string filtered to match format '*.4[0-9].*'
+     	For each string filtered to match format '*name.####.ext'
             	store K,V in dictionary, where K=name, V=list of number
 
     To output, iterate over dictionary. 
     The list needs to be organized in order to ouput desired range format:
 	1. sort list
 	2. As we iterate each number, retain the first and last value of each range.
-	3. When previous number visited is no longer a difference of 1, we know there's a gap - current range has been completed.
-	4. Generate interval if first and last if they are different, otherwise only generate first (or last)
+	3. When the previous number visited is no longer a difference of 1, we know there's a gap detected: 
+	   generate an interval if the first and last are different, otherwise generate the first (or last) number only
        
