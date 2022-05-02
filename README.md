@@ -86,7 +86,7 @@ The following example will not be supported to keep the function simple:
 It's a matter of organizing filenames (string) in a given directory:
 
  	If path exists
-     	For each string filtered to match format '*name.####.ext'
+     	For each string filtered to match format 'name.####.ext'
             	store K,V in dictionary, where K=name, V=list of number
 
     To output, iterate over dictionary. 
