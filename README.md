@@ -7,7 +7,7 @@ This repository includes:
 * Test cases using unittest from Python: ```/tests/test_animation_sequences.py```
 	* use command ```python -m unittest``` from the root of the project
 ___
-## Analysis (brainstorm)
+## Analysis
 ### Task summary
 We want a function that finds all animation sequences in a given directory.
 The format for an animated sequence is 'name.####.ext'.
