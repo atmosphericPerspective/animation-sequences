@@ -82,6 +82,10 @@ The following example will not be supported to keep the function simple:
         'name1 (png): 11-20'
         'name2: 0-10'
 
+**5. filenames should include a-z, A-Z, 0-9, dashes, underscores and spaces only**
+
+Also, the name should not start with spaces.
+
 ### Implementation
 It's a matter of organizing filenames (string) in a given directory:
 

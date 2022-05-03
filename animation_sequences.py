@@ -9,7 +9,9 @@ def find_animation_sequences(path: str):
 
     numbers_by_name = {}
     for filepath in p.iterdir():
-        match = re.search(r"(\w+)[.](\d{4})[.]\w+$", str(filepath))
+        # regex pattern = 'name.####.ext' where name includes a-z, A-Z, 0-9, dashes, underscores and spaces.
+        # Also, the name should not lead with spaces.
+        match = re.search(r"([\w-]+[\w\s-]*)[.](\d{4})[.]\w+$", str(filepath))
         if match:
             key = match.group(1)
             value = int(match.group(2))
