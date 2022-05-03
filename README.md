@@ -17,7 +17,7 @@ The format for an animated sequence is 'name.####.ext'.
 	* e.g. 'name: 1001, 1003-1500, 1600-2000'
 
 
-### Use case assumptions:
+### Use case assumptions
 Assumptions are made to keep the function as robust and simple as possible.
 In a real world situation, each assumption would need to be validated with
 the appropriate people: we don't want to miss out important edge cases, and
@@ -81,10 +81,6 @@ The following example will not be supported to keep the function simple:
         'name1 (jpeg): 0-10'
         'name1 (png): 11-20'
         'name2: 0-10'
-
-**5. filenames should include a-z, A-Z, 0-9, dashes, underscores and spaces only**
-
-Also, the name should not contain leading spaces.
 
 ### Implementation
 It's a matter of organizing filenames (string) in a given directory:
