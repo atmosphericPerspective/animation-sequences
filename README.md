@@ -84,7 +84,7 @@ The following example will not be supported to keep the function simple:
 
 **5. filenames should include a-z, A-Z, 0-9, dashes, underscores and spaces only**
 
-Also, the name should not start with spaces.
+Also, the name should not contain leading spaces.
 
 ### Implementation
 It's a matter of organizing filenames (string) in a given directory:
